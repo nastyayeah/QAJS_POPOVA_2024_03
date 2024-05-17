@@ -13,6 +13,7 @@
     "codestyle": "run-s lint format",
     "build": "babel src --out-dir build --source-maps inline",
     "test": "jest --verbose",
+    "test:app": "jest --runTestsByPath ./tests/app.test.js",
     "coverage": "jest --coverage"
   },
   "author": "Damir Rysaev <freepad@ya.ru>",
