@@ -13,7 +13,9 @@
     "codestyle": "run-s lint format",
     "build": "babel src --out-dir build --source-maps inline",
     "test": "jest --verbose",
-    "coverage": "jest --coverage"
+    "test:app": "jest --runTestsByPath ./tests/app.test.js",
+    "coverage": "jest --coverage",
+    "test:api": "jest --runTestsByPath tests/api.test.js"
   },
   "author": "Damir Rysaev <freepad@ya.ru>",
   "keywords": [],
@@ -24,6 +26,8 @@
     "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.24.4",
     "@jest/types": "^29.6.3",
+    "@types/jest": "^29.5.12",
+    "axios": "^1.7.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
@@ -33,7 +37,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "jest": "^29.7.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.2.5",
-    "@types/jest": "^29.5.12"
+    "prettier": "^3.2.5"
   }
 }
