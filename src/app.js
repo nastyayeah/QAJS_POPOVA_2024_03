@@ -54,14 +54,7 @@ export const getTotal = (items = [], discount = 0) => {
  * @example getScore({Anastasia : 10, Katya : 1, Alex : 9}) // 20
  */
 
-const scores = {
-  // scores - обьект, anna/olga/ivan - ключи, 10/1/5 - значение
-  Anna: 10,
-  Olga: 1,
-  Ivan: 5,
-}
-
-function getScore(scoreObj) {
+export function getScore(scoreObj) {
   let counter = 0
   let obj
   for (obj in scoreObj) {
@@ -69,5 +62,3 @@ function getScore(scoreObj) {
   }
   return counter
 }
-
-console.log(getScore(scores))
