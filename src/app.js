@@ -63,7 +63,7 @@ const scores = {
 
 function getScore(scoreObj) {
   let counter = 0
-  let obj 
+  let obj
   for (obj in scoreObj) {
     counter += scoreObj[obj]
   }
