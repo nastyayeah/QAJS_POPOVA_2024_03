@@ -1,4 +1,7 @@
-import {generateUserCredentials, generatePersonalUserData} from '../user-fixture.js'
+import {
+  generateUserCredentials,
+  generatePersonalUserData,
+} from '../user-fixture.js'
 
 export const userRequestBody = {
   id: 1,

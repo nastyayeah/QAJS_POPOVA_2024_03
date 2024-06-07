@@ -8,7 +8,6 @@ import {
 
 import 'dotenv/config'
 
-
 describe('User API endpoints: create|get|update user with valid data', () => {
   let username
 
@@ -21,7 +20,10 @@ describe('User API endpoints: create|get|update user with valid data', () => {
     const response = await createUser(requestBody)
     expect(response.status).toBe(200)
     expect(response.data).toEqual(
-      expect.objectContaining({ code: 200, message: requestBody.id.toString() })
+      expect.objectContaining({
+        code: 200,
+        message: requestBody.id.toString(),
+      }),
     )
 
     username = requestBody.username
@@ -47,18 +49,18 @@ describe('User API endpoints: create|get|update user with valid data', () => {
     const updatedRequestBody = userRequestBody
     const updateUserResponse = await updateUserByName(
       username,
-      updatedRequestBody
+      updatedRequestBody,
     )
     expect(updateUserResponse.status).toBe(200)
     expect(updateUserResponse.data).toEqual(
-      expect.objectContaining({ code: 200 })
+      expect.objectContaining({ code: 200 }),
     )
 
     username = requestBody.username
     const getUserDataResponse = await getUserByName(username)
     expect(getUserDataResponse.status).toBe(200)
     expect(getUserDataResponse.data).toEqual(
-      expect.objectContaining(updatedRequestBody)
+      expect.objectContaining(updatedRequestBody),
     )
   })
 })
@@ -73,7 +75,7 @@ describe('User API endpoints: delete user', () => {
     const deleteUserResponse = await deleteUserByName(username)
     expect(deleteUserResponse.status).toBe(200)
     expect(deleteUserResponse.data).toEqual(
-      expect.objectContaining({ code: 200, message: username })
+      expect.objectContaining({ code: 200, message: username }),
     )
   })
 
@@ -82,7 +84,6 @@ describe('User API endpoints: delete user', () => {
     expect(getUserResponse.status).toBe(404)
   })
 })
-
 
 describe('User API endpoints: requests with invalid data', () => {
   test('should not create user w/o required properties', async () => {
