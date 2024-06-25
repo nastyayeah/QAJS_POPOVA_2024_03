@@ -18,7 +18,8 @@ import {
 } from '../../framework/fixtures/request-body/book-store-body'
 import { addToken } from '../../framework/utils/generate-token'
 
-describe('Book store API endpoints', () => {
+// eslint-disable-next-line
+describe.only('Book store API endpoints', () => {
   let userId
 
   beforeEach(async () => {
