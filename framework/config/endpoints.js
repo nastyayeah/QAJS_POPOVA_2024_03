@@ -6,3 +6,13 @@ export const userApiEndpoints = {
   loginUser: (username, password) =>
     `/user/login?username=${username}&password=${password}`,
 }
+
+export const bookStoreApiEndpoints = {
+  addBook: '/Books',
+  updateBookStore: bookId => `/Books/${bookId}`,
+  getBookInfo: bookId => `/Book/?ISBN=${bookId}`,
+  deleteBook: '/Book',
+  createUserAccount: '/User',
+  deleteUserAccount: UserId => `/User/${UserId}`,
+  generateUserToken: '/GenerateToken',
+}
