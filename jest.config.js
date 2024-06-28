@@ -118,7 +118,6 @@ const config = {
         openReport: true,
         includeFailureMsg: true,
         includeConsoleLog: true,
-        
       },
     ],
   ],
