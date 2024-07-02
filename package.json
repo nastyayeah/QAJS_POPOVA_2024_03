@@ -14,7 +14,7 @@
     "build": "babel src --out-dir build --source-maps inline",
     "test": "jest --verbose",
     "test:api": "jest --runTestsByPath tests/api/user-api.test.js",
-    "test:patterns": "rm -f ./test-report.html && jest --runTestsByPath tests/api/book-store-api.test.js",
+    "test:patterns": "rm -f ./reposrts/test-report.html && jest --runTestsByPath tests/api/book-store-api.test.js",
     "coverage": "jest --coverage"
   },
   "author": "Damir Rysaev <freepad@ya.ru>",
