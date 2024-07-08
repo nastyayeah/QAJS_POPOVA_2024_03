@@ -36,6 +36,11 @@ jobs:
           if-no-files-found: error
           path: ./jest-html-report
           
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./jest-html-report
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
