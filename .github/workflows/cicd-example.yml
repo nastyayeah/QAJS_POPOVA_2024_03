@@ -34,7 +34,7 @@ jobs:
         with: 
           name: report
           if-no-files-found: error
-          path: ./reports
+          path: ./jest-html-report
           
       - name: Deploy to GitHub Pages
         id: deployment
