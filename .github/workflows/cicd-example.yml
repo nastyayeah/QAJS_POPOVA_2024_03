@@ -35,3 +35,7 @@ jobs:
           name: report
           if-no-files-found: error
           path: ./reports
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
