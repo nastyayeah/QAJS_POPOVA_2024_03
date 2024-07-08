@@ -36,6 +36,20 @@ jobs:
           if-no-files-found: error
           path: ./jest-html-report
           
+      - name: Send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: -4269860473 # -4269860473
+          token: ${{ secrets.TELEGRAM_BOT }}
+          photo: ./test.png
+          message: |
+            ${{ github.actor }} created commit new view:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
