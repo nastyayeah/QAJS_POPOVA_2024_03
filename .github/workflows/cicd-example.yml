@@ -29,9 +29,9 @@ jobs:
       - name: Run test and generate report
         run: npm run test:patterns
 
-    - name: Upload report
-      uses: actions/upload-artifact@v3
-      with: 
-        name: report
-        if-no-files-found: error
-        path: ./reports
+      - name: Upload report
+        uses: actions/upload-artifact@v3
+        with: 
+          name: report
+          if-no-files-found: error
+          path: ./reports
